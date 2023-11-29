@@ -12,11 +12,11 @@ function NewsPage(props) {
     const [comments, setComments] = useState([])
     const fetchNews = async () => {
         const {data} = await axios.get(`${API_DOMAIN}/news/${newsId}`)
-        setNews(data)
+        console.log(data[0])
+        setNews(data[0])
     }
     const fetchComments = async () => {
         const {data} = await axios.get(`${API_DOMAIN}/comments/${newsId}`)
-        console.log(data)
         setComments(data)
     }
     const imageUrl = 'https://picsum.photos/1920/1080'

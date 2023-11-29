@@ -12,7 +12,8 @@ import {useParams} from "react-router-dom";
 function News({isRoot, navs}) {
   let {categoryId} = useParams()
   console.log(navs[categoryId])
-  // const category = isRoot ? 'everything' : navs[categoryId].name
+  categoryId ??= 10;
+  // const category = isRoot ? 'everything' : navs.name
   const category = "everything"
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
