@@ -3,7 +3,7 @@ import axios from "axios";
 import Loading from "../Loading/Loading";
 import NewsItem from "../NewsItem/NewsItem";
 import { v4 as uuidv4 } from "uuid";
-import { Col, Row } from "react-bootstrap";
+import {Button, Col, Row} from "react-bootstrap";
 import { header } from "../../config/config";
 import {API_DOMAIN} from "../../config/api";
 import { Container, Header, card } from "./index";
@@ -59,6 +59,7 @@ function News({isRoot, navs}) {
 
 useEffect(() => {
   sortArticles();
+  updatenews()
   // eslint-disable-next-line
 }, [isAsc]);
 
@@ -75,11 +76,11 @@ useEffect(() => {
       ) : (
         <>
           <Header>{header(capitalize(category))}</Header>
+          <Button onClick={() => setIsAsc(!isAsc)}>
+            Sort by title {isAsc ? "Ascending" : "Descending"}
+          </Button>
           <Container>
             <Row>
-              <button onClick={() => setIsAsc(!isAsc)}>
-                Sort by title {isAsc ? "Ascending" : "Descending"}
-              </button>
               {articles.map((element, id) => {
                 return (
                     <Col sm={12} md={6} lg={4} xl={3} style={card} key={uuidv4()}>
