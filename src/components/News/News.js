@@ -33,7 +33,7 @@ function News({isRoot, navs}) {
       setLoading(true);
       const parsedData = response.data;
       setImages(data)
-      setArticles(parsedData);
+      setArticles(parsedData.content);
       setLoading(false);
     } catch (error) {
       console.error(error);

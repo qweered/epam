@@ -16,8 +16,9 @@ function NewsPage(props) {
         setNews(data[0])
     }
     const fetchComments = async () => {
-        const {data} = await axios.get(`${API_DOMAIN}/comments/${newsId}`)
-        setComments(data)
+        const {data} = await axios.get(`${API_DOMAIN}/comments/news/${newsId}/comments`)
+        console.log(data)
+        setComments(data.content)
     }
     const imageUrl = 'https://picsum.photos/1920/1080'
     useEffect(() => {
