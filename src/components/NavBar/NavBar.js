@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from "react";
+import React, { useRef, useState} from "react";
 import { IoCloseOutline } from "react-icons/io5";
 import { Button, Form, FormControl, Nav, Navbar } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
@@ -16,23 +16,8 @@ import {
   closeBtn,
   searchForm,
 } from "./index";
-import axios from "axios";
-import {API_DOMAIN} from "../../config/api";
 
 function NavBar({navs}) {
-  // const [navs, setNavs] = useState([])
-  // let categories = []
-  // const getCategories = async() => {
-  //   const {data} = await axios.get(`${API_DOMAIN}/tags`)
-  //   data.forEach((element) => {
-  //     categories.push({nav: element.name, page: `/categories/${element.id}`})
-  //   })
-  //   setNavs(categories)
-  // }
-  //
-  // useEffect(() => {
-  //   getCategories();
-  // }, []);
 
   const navigate = useNavigate();
 

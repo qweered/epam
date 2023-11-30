@@ -6,7 +6,7 @@ import axios from "axios";
 import {useEffect, useState} from "react";
 import UserComment from "../UserComment";
 
-function NewsPage(props) {
+function NewsPage() {
     let { newsId} = useParams()
     const [news, setNews] = useState([])
     const [comments, setComments] = useState([])
