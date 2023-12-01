@@ -6,5 +6,6 @@ Daniil Anishchanka (anishchanka.daniil@student.ehu.lt)
 В этом репозитории только фронтенд
 
 Prerequisites - Node.js, pnpm
+
 pnpm install
 pnpm start
