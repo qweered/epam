@@ -8,4 +8,5 @@ Daniil Anishchanka (anishchanka.daniil@student.ehu.lt)
 Prerequisites - Node.js, pnpm
 
 pnpm install
+
 pnpm start
